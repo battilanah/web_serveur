@@ -533,6 +533,7 @@ const helmet = require('helmet')
 app.use(helmet.contentSecurityPolicy({
   directives: {
     defaultSrc: ["'self'"],
+    
     styleSrc: ["'self'", 'maxcdn.bootstrapcdn.com']
   }
 }))
