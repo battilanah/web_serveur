@@ -480,7 +480,7 @@ Comme toujours, on commence par :
 
 en-tête http
 ^^^^^^^^ 
-Les en-têtes http contiennent de nombreuses données, il faut donf y attacher une importance particulière.
+Les en-têtes http contiennent de nombreuses données, il faut donc y attacher une importance particulière.
 
 Ce code permet de modifier le contenu des ent-têtes http:
 
@@ -532,7 +532,7 @@ Content Security Policy
 
 On peut à l'aide d'Helmet, définir des options de csp:
 
-.. code-block:: js
+.. code-block:: text
 
 const helmet = require('helmet')
 
