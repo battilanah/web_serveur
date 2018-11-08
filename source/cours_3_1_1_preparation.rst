@@ -489,30 +489,30 @@ Voilà quoi ressemble une en-tête http sans Helmet:
 
 .. code-block:: js
 
-HTTP/1.1 200 OK
-X-Powered-By: Express
-Content-Type: text/html; charset=utf-8
-Content-Length: 20
-ETag: W/"14-SsoazAISF4H46953FT6rSL7/tvU"
-Date: Wed, 01 Nov 2017 13:36:10 GMT
-Connection: keep-alive
+- HTTP/1.1 200 OK
+- X-Powered-By: Express
+- Content-Type: text/html; charset=utf-8
+- Content-Length: 20
+- ETag: W/"14-SsoazAISF4H46953FT6rSL7/tvU"
+- Date: Wed, 01 Nov 2017 13:36:10 GMT
+- Connection: keep-alive
 
 Avec Helmet cela ressemble à ça:
 
 .. code-block:: js
 
-HTTP/1.1 200 OK
-X-DNS-Prefetch-Control: off
-X-Frame-Options: SAMEORIGIN
-Strict-Transport-Security: max-age=15552000; includeSubDomains
-X-Download-Options: noopen
-X-Content-Type-Options: nosniff
-X-XSS-Protection: 1; mode=block
-Content-Type: text/html; charset=utf-8
-Content-Length: 20
-ETag: W/"14-SsoazAISF4H46953FT6rSL7/tvU"
-Date: Wed, 01 Nov 2017 13:50:42 GMT
-Connection: keep-alive
+- HTTP/1.1 200 OK
+- X-DNS-Prefetch-Control: off
+- X-Frame-Options: SAMEORIGIN
+- Strict-Transport-Security: max-age=15552000; includeSubDomains
+- X-Download-Options: noopen
+- X-Content-Type-Options: nosniff
+- X-XSS-Protection: 1; mode=block
+- Content-Type: text/html; charset=utf-8
+- Content-Length: 20
+- ETag: W/"14-SsoazAISF4H46953FT6rSL7/tvU"
+- Date: Wed, 01 Nov 2017 13:50:42 GMT
+- Connection: keep-alive
  
  Cette fonction permet donc de gérer les données apparaissant dans une en-tête http :
 - Elle permet notamment de cacher le fait qu'on ait utilisé express ici pour faire notre site.
@@ -526,7 +526,7 @@ Content Security Policy
 
 On peut à l'aide d'Helmet, définir des options de csp:
 
-.. code-block:: js
+.. code-block:: javascript
 
 const helmet = require('helmet')
 
