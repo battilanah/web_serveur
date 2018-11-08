@@ -471,10 +471,13 @@ Et le :file:`server.js`
 Sécurité
 ======
 
-La sécurité d'un site est un problème très important à prendre en compte lorsque l'on crée un site, sans quoi un utilisateur malveillant pourrait récupérer les données contenues sur vos pages !
+La **sécurité** d'un site est un problème très important à prendre en compte lorsque l'on crée un site, sans quoi un utilisateur malveillant pourrait récupérer les données contenues sur vos pages !
 Node.js propose un module permettant de mettre en place quelques options de sécurité, il s'agit de Helmet.
 
-Ce code permet de modifier le contenu des requêtes http:
+en-tête http
+^^^^^^^^ 
+
+Ce code permet de modifier le contenu des ent-têtes http:
 
 .. code-block:: js
 
@@ -511,12 +514,12 @@ ETag: W/"14-SsoazAISF4H46953FT6rSL7/tvU"
 Date: Wed, 01 Nov 2017 13:50:42 GMT
 Connection: keep-alive
  
- Cette fonction permet donc de gérer le <strong> cp</strong> les données apparaissant dans une en-tête http :
+ Cette fonction permet donc de gérer les données apparaissant dans une en-tête http :
 - Elle permet notamment de cacher le fait qu'on ait utilisé express ici pour faire notre site.
-- elle permet d'arrêter le <a href="https://www.alsacreations.com/astuce/lire/1567-prefetch-prerender-dns-prefetch-link.html">DNS-Fetching </a>. Je vous invite à cliquer sur le lien pour en savoir plus.
+- elle permet d'arrêter le DNS-Fetching. Je vous invite à cliquer sur le lien pour en savoir plus: "https://www.alsacreations.com/astuce/lire/1567-prefetch-prerender-dns-prefetch-link.html
 
  
-Comme on peut le voir, il y a d'autres modifications effectuées. Vous pouvez aller voir tout ça sur le web?
+Comme on peut le voir, il y a d'autres modifications effectuées. Vous pouvez aller voir tout ça sur le web.
 
 Content Security Policy
 ^^^^^^^^ 
@@ -535,14 +538,14 @@ app.use(helmet.contentSecurityPolicy({
 }))
 
 
-Par exemple, la ligne <strong>defaultSrc</Strong> permet de définir les un contrainte des fichiers que l'on peut charger, à partir de leur emplacement. Ici le "self" n'autorise des fichiers que sur notre domaine.
+Par exemple, la ligne **defaultSrc** permet de définir les un contrainte des fichiers que l'on peut charger, à partir de leur emplacement. Ici le "self" n'autorise des fichiers que sur notre domaine.
 
 
 XSS
 ^^^^^^^^ 
 
 Enfin, un des derniers problèmes dont nous allons parler est l'injection de code ou XSS : Via l'url, un utilisateur malveillant peut injecter du code qui va effectuer des actions sur votre serveur comme par exemple récupérer des données.
-Pour l'éviter , Helmet propose la fonction xssFilter.
+Pour l'éviter , Helmet propose la fonction **xssFilter()**.
     
 
 
