@@ -526,7 +526,7 @@ Content Security Policy
 
 On peut à l'aide d'Helmet, définir des options de csp:
 
-.. code-block:: javascript
+.. code-block:: js
 
 const helmet = require('helmet')
 
