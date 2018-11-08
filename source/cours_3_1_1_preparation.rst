@@ -476,7 +476,7 @@ Node.js propose un module permettant de mettre en place quelques options de séc
 
 Comme toujours, on commence par : 
 
-#. :code:`npm install helmet --save`,
+ :code:`npm install helmet --save`,
 
 en-tête http
 ^^^^^^^^ 
@@ -546,7 +546,7 @@ app.use(helmet.contentSecurityPolicy({
 
 
 
-Par exemple, la ligne **defaultSrc** permet de définir les un contrainte des fichiers que l'on peut charger, à partir de leur emplacement. Ici le "self" n'autorise des fichiers que sur notre domaine.
+Par exemple, la ligne **defaultSrc** permet de définir des contraintes sur les fichiers que l'on peut charger, à partir de leur emplacement. Ici le "self" n'autorise des fichiers que sur notre domaine.
 Il existe beaucoup d'autres options, permettant de gérer des provenances de fichiers par exemple, mais je ne les citerai pas ici, car il y en a un grand nombre.
 
 
