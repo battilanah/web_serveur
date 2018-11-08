@@ -471,11 +471,16 @@ Et le :file:`server.js`
 Sécurité
 ======
 
-La **sécurité** d'un site est un problème très important à prendre en compte lorsque l'on crée un site, sans quoi un utilisateur malveillant pourrait récupérer les données contenues sur vos pages !
-Node.js propose un module permettant de mettre en place quelques options de sécurité, il s'agit de Helmet.
+La **sécurité** d'un site est un problème très important à prendre en compte lorsque l'on en crée un, sans quoi un utilisateur malveillant pourrait récupérer les données contenues sur vos pages !
+Node.js propose un module permettant de mettre en place quelques options de sécurité, il s'agit de **Helmet**.
+
+Comme toujours, on commence par : 
+
+#. :code:`npm install helmet --save`,
 
 en-tête http
 ^^^^^^^^ 
+Les en-têtes http contiennent de nombreuses données, il faut donf y attacher une importance particulière.
 
 Ce code permet de modifier le contenu des ent-têtes http:
 
@@ -518,6 +523,7 @@ Avec Helmet cela ressemble à ça:
 - Elle permet notamment de cacher le fait qu'on ait utilisé express ici pour faire notre site.
 - elle permet d'arrêter le DNS-Fetching. Je vous invite à cliquer sur le lien pour en savoir plus: "https://www.alsacreations.com/astuce/lire/1567-prefetch-prerender-dns-prefetch-link.html
 
+
  
 Comme on peut le voir, il y a d'autres modifications effectuées. Vous pouvez aller voir tout ça sur le web.
 
@@ -539,7 +545,9 @@ app.use(helmet.contentSecurityPolicy({
 }))
 
 
+
 Par exemple, la ligne **defaultSrc** permet de définir les un contrainte des fichiers que l'on peut charger, à partir de leur emplacement. Ici le "self" n'autorise des fichiers que sur notre domaine.
+Il existe beaucoup d'autres options, permettant de gérer des provenances de fichiers par exemple, mais je ne les citerai pas ici, car il y en a un grand nombre.
 
 
 XSS
